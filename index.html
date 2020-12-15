@@ -21,25 +21,25 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="myprofile">
-  <link rel="apple-touch-icon" href="web/icons/Icon-192.png">
+  <link rel="apple-touch-icon" href="app/icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="web/image/png" href="favicon.png"/>
+  <link rel="icon" type="app/image/png" href="favicon.png"/>
 
   <title>myprofile</title>
-  <link rel="manifest" href="web/manifest.json">
+  <link rel="manifest" href="app/manifest.json">
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+       https://developers.google.com/app/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('web/flutter_service_worker.js?v=398634346');
+        navigator.serviceWorker.register('app/flutter_service_worker.js?v=398634346');
       });
     }
   </script>
-  <script src="web/main.dart.js" type="application/javascript"></script>
+  <script src="app/main.dart.js" type="application/javascript"></script>
 </body>
 </html>
