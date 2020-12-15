@@ -16,61 +16,68 @@ void main() {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 70.0, bottom: 10.0),
-      color: Colors.black,
-      child: Column(
-        children: [
-          Expanded(
-            child: circleImage(
-              width: 320.0,
-              height: 320.0,
-              img: 'images/myprofile.png',
-            ),
-          ),
-          textCustom('Elton Correia', 40.0, FontWeight.bold),
-          textCustom(
-            'Python Developer/Learning Flutter',
-            20.0,
-            FontWeight.normal,
-          ),
-          Container(
-            width: 300.0,
-            decoration: BoxDecoration(color: Colors.white),
-            child: Row(
-              children: [
-                networksIcons(
-                  'images/github.png',
-                  'https://github.com/eltonjncorreia',
-                ),
-                networksIcons(
-                  'images/linkedin.png',
-                  'https://www.linkedin.com/in/elton-jefferson/',
-                ),
-                networksIcons(
-                  'images/twitter.png',
-                  'https://twitter.com/eltonjncorreia',
-                ),
-                networksIcons(
-                  'images/facebook.png',
-                  'https://www.facebook.com/elton.ej/',
-                ),
-              ],
-            ),
-          ),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.only(top: 108.0),
-            child: Text(
-              'Developed with Flutter!',
-              style: TextStyle(
-                fontSize: 14.0,
-                fontWeight: FontWeight.normal,
-                color: Colors.amber,
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.only(top: 70.0, bottom: 10.0),
+        color: Colors.black,
+        child: Column(
+          children: [
+            Expanded(
+              child: circleImage(
+                width: 320.0,
+                height: 320.0,
+                img: 'images/myprofile.png',
               ),
             ),
-          )
-        ],
+            textCustom('Elton Correia', 40.0, FontWeight.bold),
+            textCustom(
+              'Python Developer/Learning Flutter',
+              20.0,
+              FontWeight.normal,
+            ),
+            Container(
+              width: 300.0,
+              decoration: BoxDecoration(color: Colors.white),
+              child: Row(
+                children: [
+                  networksIcons(
+                    'images/github.png',
+                    'https://github.com/eltonjncorreia',
+                  ),
+                  networksIcons(
+                    'images/linkedin.png',
+                    'https://www.linkedin.com/in/elton-jefferson/',
+                  ),
+                  networksIcons(
+                    'images/twitter.png',
+                    'https://twitter.com/eltonjncorreia',
+                  ),
+                  networksIcons(
+                    'images/facebook.png',
+                    'https://www.facebook.com/elton.ej/',
+                  ),
+                ],
+              ),
+            ),
+            Divider(),
+            Padding(
+              padding: const EdgeInsets.only(top: 108.0),
+              child: GestureDetector(
+                onTap: () async => _launchURL(
+                  'https://github.com/eltonjncorreia/eltonjncorreia.github.io',
+                ),
+                child: Text(
+                  'Developed with Flutter!',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.amber,
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
