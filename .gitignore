@@ -14,12 +14,12 @@
 *.ipr
 *.iws
 .idea/
-web/
 ios/
 android/
 test/
 pubspec.lock
 .metadata
+/web/
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
@@ -34,7 +34,8 @@ pubspec.lock
 .packages
 .pub-cache/
 .pub/
-/build/
+/build/flutter_assets/
+cache.dill.track.dill
 
 # Web related
 lib/generated_plugin_registrant.dart
